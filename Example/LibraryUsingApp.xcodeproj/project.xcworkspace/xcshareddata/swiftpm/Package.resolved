@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BleLibrary",
+        "repositoryURL": "https://github.com/juandavinlie/BleLibrary",
+        "state": {
+          "branch": "master",
+          "revision": "360ca08a2596183f726e82b7f6423edcbaf48518",
+          "version": null
+        }
+      },
+      {
+        "package": "CryptoSwift",
+        "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "12f2389aca4a07e0dd54c86ec23d0721ed88b8db",
+          "version": "1.4.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

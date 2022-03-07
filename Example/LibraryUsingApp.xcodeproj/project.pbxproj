@@ -17,6 +17,7 @@
 		ACC81E4927D6038100601CDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC81E1F27D6037F00601CDE /* ContentView.swift */; };
 		ACC81E4A27D6038100601CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC81E2027D6038100601CDE /* Assets.xcassets */; };
 		ACC81E4B27D6038100601CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC81E2027D6038100601CDE /* Assets.xcassets */; };
+		ACC81E5C27D6044A00601CDE /* BleLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = ACC81E5B27D6044A00601CDE /* BleLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC81E5C27D6044A00601CDE /* BleLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,9 @@
 			dependencies = (
 			);
 			name = "LibraryUsingApp (iOS)";
+			packageProductDependencies = (
+				ACC81E5B27D6044A00601CDE /* BleLibrary */,
+			);
 			productName = "LibraryUsingApp (iOS)";
 			productReference = ACC81E2527D6038100601CDE /* LibraryUsingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +254,9 @@
 				Base,
 			);
 			mainGroup = ACC81E1827D6037E00601CDE;
+			packageReferences = (
+				ACC81E5A27D6044A00601CDE /* XCRemoteSwiftPackageReference "BleLibrary" */,
+			);
 			productRefGroup = ACC81E2627D6038100601CDE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -703,6 +711,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACC81E5A27D6044A00601CDE /* XCRemoteSwiftPackageReference "BleLibrary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/juandavinlie/BleLibrary";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACC81E5B27D6044A00601CDE /* BleLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACC81E5A27D6044A00601CDE /* XCRemoteSwiftPackageReference "BleLibrary" */;
+			productName = BleLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACC81E1927D6037E00601CDE /* Project object */;
 }
