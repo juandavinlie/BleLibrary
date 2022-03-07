@@ -1,9 +1,13 @@
 import CryptoSwift
 
 public struct BleLibrary {
-    public private(set) var text = "Hello, World!"
+    private let blueService = BluetoothService()
 
     public init() {
-        print(text)
+        print("Initialised BleLibrary..")
+    }
+    
+    public func connect() {
+        blueService.connect()
     }
 }

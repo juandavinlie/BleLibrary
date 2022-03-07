@@ -103,7 +103,16 @@ class BluetoothService : UIViewController {
         centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.global())
     }
     
-    @IBAction func connect(_ sender: Any) {
+//    @IBAction func connect(_ sender: Any) {
+//        if centralManager.state == .poweredOn {
+//            print("Scanning...")
+//            centralManager.scanForPeripherals(withServices: nil, options: nil)
+//        } else {
+//            print("Scanning failed")
+//        }
+//    }
+    
+    func connect() {
         if centralManager.state == .poweredOn {
             print("Scanning...")
             centralManager.scanForPeripherals(withServices: nil, options: nil)
