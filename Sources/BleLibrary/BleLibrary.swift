@@ -1,4 +1,5 @@
 import CryptoSwift
+import UIKit
 
 public struct BleLibrary {
     private let blueService = BluetoothService()
@@ -7,7 +8,7 @@ public struct BleLibrary {
         print("Initialised BleLibrary..")
     }
     
-    public func connect() {
+    public func connect(sender: UIButton!) {
         blueService.connect()
     }
 }
