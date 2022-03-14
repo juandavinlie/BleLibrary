@@ -2,9 +2,10 @@ import CryptoSwift
 import UIKit
 
 public struct BleLibrary {
-    private let blueService = BluetoothService()
+    private var blueService : BluetoothService
 
     public init() {
+        blueService = BluetoothService()
         print("Initialised BleLibrary..")
     }
     
