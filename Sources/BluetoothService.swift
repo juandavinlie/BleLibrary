@@ -21,7 +21,11 @@ extension BluetoothService :  CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         if peripheral.name != nil {
             print(peripheral.name!)
-            if peripheral.name!.lowercased() == "carro-ble-test-2" {
+            if idName == nil {
+                centralManager.stopScan()
+                print("Identifier not present")
+            }
+            else if peripheral.name!.lowercased() == idName {
                 blePeripheral = peripheral
                 centralManager.stopScan()
                 centralManager.connect(peripheral)
@@ -96,6 +100,7 @@ class BluetoothService : UIViewController {
     private var rxCharacteristic : CBCharacteristic!
     private var scUUID : CBUUID = CBUUID(string: "38fa1994-8d3a-11ec-b909-0242ac120030")
     private var grantedAccess : Bool = false
+    private var idName : String? = nil
     
     convenience init() {
         self.init(nibName:nil, bundle:nil)
@@ -116,7 +121,8 @@ class BluetoothService : UIViewController {
 //        }
 //    }
     
-    func connect() {
+    func connect(connectIdName : String) {
+        idName = connectIdName.lowercased()
         if centralManager.state == .poweredOn {
             print("Scanning...")
             centralManager.scanForPeripherals(withServices: nil, options: nil)

@@ -9,8 +9,8 @@ public struct BleLibrary {
         print("Initialised BleLibrary..")
     }
     
-    public func connect() {
-        blueService.connect()
+    public func connect(idName : String) {
+        blueService.connect(connectIdName: idName)
     }
     
     public func lock() {
