@@ -88,7 +88,7 @@ extension BluetoothService : CBPeripheralDelegate {
     }
 }
 
-class BluetoothService {
+class BluetoothService : UIViewController {
     private var centralManager : CBCentralManager!
     private var blePeripheral : CBPeripheral!
     private var serviceUUID : CBUUID = CBUUID(string: "1fafc201-1fb5-459e-8fcc-c5c9c331914b")
@@ -98,7 +98,8 @@ class BluetoothService {
     private var grantedAccess : Bool = false
     
     
-    init() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.global())
     }
     
