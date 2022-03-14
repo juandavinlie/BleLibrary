@@ -8,7 +8,7 @@ public struct BleLibrary {
         print("Initialised BleLibrary..")
     }
     
-    public func connect(sender: UIButton!) {
+    public func connect() {
         blueService.connect()
     }
 }
