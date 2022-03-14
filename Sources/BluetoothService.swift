@@ -97,6 +97,10 @@ class BluetoothService : UIViewController {
     private var scUUID : CBUUID = CBUUID(string: "38fa1994-8d3a-11ec-b909-0242ac120030")
     private var grantedAccess : Bool = false
     
+    convenience init() {
+        self.init(nibName:nil, bundle:nil)
+        centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.global())
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
