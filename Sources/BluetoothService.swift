@@ -134,11 +134,19 @@ class BluetoothService : UIViewController {
         }
     }
     
-    @IBAction func lock(_ sender: Any) {
+//    @IBAction func lock(_ sender: Any) {
+//        writeToCharacteristic(command: "Vehicle Lock.", characteristic: rxCharacteristic)
+//    }
+    
+    func lock() {
         writeToCharacteristic(command: "Vehicle Lock.", characteristic: rxCharacteristic)
     }
     
-    @IBAction func unlock(_ sender: Any) {
+//    @IBAction func unlock(_ sender: Any) {
+//        writeToCharacteristic(command: "Vehicle Unlock.", characteristic: rxCharacteristic)
+//    }
+    
+    func unlock() {
         writeToCharacteristic(command: "Vehicle Unlock.", characteristic: rxCharacteristic)
     }
 }

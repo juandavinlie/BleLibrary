@@ -12,4 +12,12 @@ public struct BleLibrary {
     public func connect() {
         blueService.connect()
     }
+    
+    public func lock() {
+        blueService.lock()
+    }
+    
+    public func unlock() {
+        blueService.unlock()
+    }
 }
